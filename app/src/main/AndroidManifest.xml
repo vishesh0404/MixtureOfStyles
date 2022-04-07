@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="liftup.tech.mixtureofstyles">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MixtureOfStyles"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activity.SelectPackageActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.ExoplayerActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Activity.DanceDetailsActivity" />
+        <activity android:name=".Activity.DanceStyleActivity" />
+        <activity android:name=".Activity.SelectPackageActivity" />
+        <activity android:name=".Activity.ManageSubsciptionActivity" />
+        <activity android:name=".Activity.DancePreferanceActivity" />
+        <activity android:name=".Activity.PasswordChangeActivity" />
+        <activity android:name=".Activity.AccountSettingsActivity" />
+        <activity android:name=".Activity.ProfileActivity" />
+        <activity
+            android:name=".Activity.DashbordActivity"
+            android:label="@string/title_activity_dashbord"
+            android:theme="@style/DarkActionBar" />
+        <activity android:name=".Activity.SettingActivity" />
+        <activity android:name=".Activity.PrivacyPolicyActivity" />
+        <activity android:name=".Activity.ContactUsActivity" />
+        <activity android:name=".Activity.AccountCreateActivity" />
+        <activity android:name=".Activity.ChangePasswordActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="dance.liftup.tech"
+                    android:pathPrefix="/API"
+                    android:scheme="http" />
+                <data
+                    android:host="dance.liftup.tech"
+                    android:pathPrefix="/API"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.DisplayPassMessageActivity" />
+        <activity android:name=".Activity.ForgotPasswordActivity" />
+        <activity android:name=".Activity.SignInActivity" />
+        <activity android:name=".Activity.CreateAccountActivity" />
+        <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_QtPAsJDvppn5wY" />
+    </application>
+
+</manifest>

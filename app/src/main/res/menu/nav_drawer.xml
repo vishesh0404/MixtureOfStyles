@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/terms"
+            android:icon="@drawable/lock"
+            android:title="Terms &amp; Condition" />
+        <item
+            android:id="@+id/privecy"
+            android:icon="@drawable/privecy"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/support"
+            android:icon="@drawable/questionnaire"
+            android:title="Support" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+</menu>

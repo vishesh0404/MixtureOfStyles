@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backscreen_color"
+    android:orientation="vertical"
+    tools:context=".Activity.DancePreferanceActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:weightSum="10"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            >
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:text="Dance Preferences"
+            android:textColor="@color/white"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_regular"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="start"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/questionnaire"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="05dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="What's Your Experience With \nDancing?"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            style="@style/TextAppearance.AppCompat.Medium"
+                            />
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView"
+                            android:weightSum="1"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/radioGroup"
+                            >
+                            <RadioButton
+                                android:id="@+id/beginner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Beginner"
+                                android:textAllCaps="false"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="15sp" />
+                            <TextView
+                                android:id="@+id/txtbeginner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="I’ve Taken Some Classes And Understand Basic Dance Terminology."
+                                android:textAllCaps="false"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="-5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/lightgray2"
+                                android:textSize="14dp"
+                                />
+                            <RadioButton
+                                android:id="@+id/intermediate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Intermediate"
+                                android:textAllCaps="false"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textStyle="normal"
+                                android:textSize="15sp" />
+                            <TextView
+                                android:id="@+id/txtintermediate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="I Have Been Dancing Regularly And Am Ready To Dive In."
+                                android:textAllCaps="false"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="-5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/lightgray2"
+                                android:textSize="14dp"
+                                />
+                            <RadioButton
+                                android:id="@+id/advanced"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Advanced"
+                                android:textAllCaps="false"
+                                android:textStyle="normal"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="15sp" />
+                            <TextView
+                                android:id="@+id/txtadvanced"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="I Have A Lot Of Experience In The Dance Style I Want To Explore."
+                                android:textAllCaps="false"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="-5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/lightgray2"
+                                android:textSize="14dp"
+                                />
+                        </RadioGroup>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="What Is Your First Goal That You Want To Work On?"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            style="@style/TextAppearance.AppCompat.Medium"
+                            />
+                        <RadioGroup
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView"
+                            android:weightSum="1"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/radioGroup1"
+                            >
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Learn How To Choreograph"
+                                android:textAllCaps="false"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="15sp" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dance In Public Confidently"
+                                android:textAllCaps="false"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="15sp" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Learn Basic Dance Foundations"
+                                android:textAllCaps="false"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:textSize="15sp" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Learn How To Freestyle"
+                                android:textAllCaps="false"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:textSize="15sp" />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Stay Healthy With Fun Dance Classes"
+                                android:textAllCaps="false"
+                                android:textStyle="normal"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@drawable/radiotextcolor"
+                                android:textSize="15sp" />
+                        </RadioGroup>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/next"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:text="Update Changes"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="16dp"
+                                android:background="@drawable/button_back_color"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
